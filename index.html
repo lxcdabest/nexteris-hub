@@ -1,61 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Personal Hub</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexteris85</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/triangle.css" />
+    <link rel="stylesheet" href="css/fx.css" />
+    <link rel="stylesheet" href="css/intro.css" />
 </head>
 <body>
-  <nav>
-    <a href="#games">Games</a>
-    <a href="#apps">Essential Apps</a>
-    <a href="#windows">Perfect Windows Install</a>
-    <a href="#github">GitHub Projects</a>
-  </nav>
 
-  <div class="container">
-    <h1>Your Personal Hub</h1>
-    <p class="subtitle">Everything you want to remember • Minimal • No dependencies</p>
+    <!-- Terminal intro -->
+    <div id="intro">
+        <div id="terminal">
+            <pre id="terminal-text"></pre>
+        </div>
+    </div>
 
-    <section id="games">
-      <h2>Games I Play</h2>
-      <ul>
-        <li>Valorant – IGN: yourIGN</li>
-        <li>Apex Legends – ID: yourID</li>
-        <li>Minecraft – servers, mods, configs</li>
-      </ul>
-    </section>
+    <div class="scanlines"></div>
 
-    <section id="apps">
-      <h2>Essential Apps</h2>
-      <ul>
-        <li>List apps you install on fresh systems</li>
-        <li>Configs or tweaks per app</li>
-        <li>Backup notes, links, license keys</li>
-      </ul>
-    </section>
+    <!-- MAIN CONTENT -->
+    <main id="main" class="hidden">
 
-    <section id="windows">
-      <h2>Perfect Windows Install</h2>
-      <ol>
-        <li>Drivers + utilities</li>
-        <li>Debloat scripts</li>
-        <li>Registry tweaks & settings</li>
-        <li>Theme + appearance setup</li>
-      </ol>
-    </section>
+        <div class="center">
+            <div class="triangle"></div>
 
-    <section id="github">
-      <h2>GitHub Projects</h2>
-      <ul>
-        <li><a href="#">github.com/you/project</a> – description</li>
-      </ul>
-    </section>
+            <div class="username">
+                <span class="tag">@nexteris85</span>
+                <span class="crypt">x2.lpfv_jrjjxnprbn</span>
+            </div>
 
-    <footer>
-      Personal Hub • Made for yourself
-    </footer>
-  </div>
+            <div class="hud">
+                <div class="crosshair"></div>
+            </div>
+        </div>
+
+        <!-- Scroll-hidden content -->
+        <section class="reveal">
+            <h2>About Me</h2>
+            <p>I love minimal, sleek setups. Just love tthem. Look at it and tell me it doesn't look clean. Anyways, I like coding in these languages: rust, python, html and css. Doesn't seem like much, but I'm planning to master more in the future, when I have more time.
+              :3</p>
+        </section>
+
+        <section class="reveal">
+            <h2>Projects</h2>
+            <p>Coming soon.</p>
+        </section>
+
+    </main>
+
+    <script src="js/app.js"></script>
+    <script src="js/intro.js"></script>
 </body>
 </html>
