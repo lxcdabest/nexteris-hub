@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "JetBrains Mono", monospace;
+  background: #050505;
+  color: #d0ffd9;
+  cursor: crosshair;
+  text-shadow: 0 0 4px #00ff9f75;
+}
+
+:root {
+  --neon: #00ff9f;
+  --neon-dim: #00ff9f55;
+  --border: #0a4f32;
+  --bg-soft: #0b0b0b;
+}
+
+@keyframes cryptic-glitch {
+  0% { text-shadow: 0 0 4px var(--neon); }
+  20% { text-shadow: 2px 0 var(--neon), -2px 0 var(--neon-dim); }
+  40% { text-shadow: -2px 0 var(--neon), 2px 0 var(--neon-dim); }
+  60% { text-shadow: 0 0 3px var(--neon-dim); }
+  80% { text-shadow: 0 0 6px var(--neon); }
+  100% { text-shadow: 0 0 4px var(--neon); }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #030303;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+nav a {
+  color: var(--neon-dim);
+  text-decoration: none;
+  transition: 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+nav a:hover {
+  color: var(--neon);
+  text-shadow: 0 0 6px var(--neon);
+  transform: translateY(-2px);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 20px 60px;
+}
+
+h1, h2 {
+  color: var(--neon);
+  text-shadow: 0 0 5px var(--neon);
+  animation: cryptic-glitch 3s infinite;
+}
+
+.subtitle {
+  color: #77ffb7;
+}
+
+section {
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  animation: fadeUp 0.5s ease forwards;
+  border-left: 2px solid var(--border);
+  padding-left: 20px;
+}
+
+section:nth-child(1) { animation-delay: 0.1s; }
+section:nth-child(2) { animation-delay: 0.2s; }
+section:nth-child(3) { animation-delay: 0.3s; }
+section:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+ul, ol {
+  color: #9effc4;
+  line-height: 1.6;
+}
+
+li::marker {
+  color: var(--neon);
+  text-shadow: 0 0 4px var(--neon);
+}
+
+a {
+  color: var(--neon);
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: 0 0 6px var(--neon);
+}
+
+footer {
+  text-align: center;
+  color: var(--neon-dim);
+  margin-top: 80px;
+  font-size: 0.9rem;
+}
